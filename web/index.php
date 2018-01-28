@@ -37,6 +37,21 @@ $route->map('GET', '/create', function (ServerRequestInterface $request, Respons
     return $response;
 });
 
+$route->map('POST', '/create', function (\Zend\Diactoros\ServerRequest $request, ResponseInterface $response) use ($view) {
+    $post = $request->getParsedBody();
+
+    
+
+
+    return $response;
+});
+
+$route->map('GET', '/dashboard', function (ServerRequestInterface $request, ResponseInterface $response) use ($view, $session) {
+    $response->getBody()->write($view->render('dash'));
+
+    return $response;
+});
+
 $response = $route->dispatch($container->get('request'), $container->get('response'));
 
 $container->get('emitter')->emit($response);

@@ -8,7 +8,7 @@
     </div>
 
     <div class="form-label-group">
-        <input type="email" id="inputEmail" class="form-control" placeholder="Chave Privada" required autofocus>
+        <input type="text" id="key" class="form-control" placeholder="Chave Privada" required autofocus>
         <label for="inputEmail">Chave privada</label>
     </div>
 
