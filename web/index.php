@@ -40,9 +40,6 @@ $route->map('GET', '/create', function (ServerRequestInterface $request, Respons
 $route->map('POST', '/create', function (\Zend\Diactoros\ServerRequest $request, ResponseInterface $response) use ($view) {
     $post = $request->getParsedBody();
 
-    
-
-
     return $response;
 });
 
@@ -55,3 +52,4 @@ $route->map('GET', '/dashboard', function (ServerRequestInterface $request, Resp
 $response = $route->dispatch($container->get('request'), $container->get('response'));
 
 $container->get('emitter')->emit($response);
+
